@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 
 import com.example.whatsup.Chat.ChatListAdapter;
 import com.example.whatsup.Chat.ChatObject;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -59,6 +60,7 @@ public class HomepageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+        Fresco.initialize(this);
         getPermissions();
         initializeRecyclerView();
         getUserChatList();
@@ -112,7 +114,7 @@ public class HomepageActivity extends AppCompatActivity {
         mChatList = findViewById(R.id.chatList);
         mChatList.setNestedScrollingEnabled(false);
         mChatList.setHasFixedSize(false);
-        mChatListLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayout.VERTICAL,false);
+        mChatListLayoutManager = new LinearLayoutManager(getApplicationContext(),   LinearLayout.VERTICAL,false);
         mChatList.setLayoutManager(mChatListLayoutManager);
         mChatListAdapter = new ChatListAdapter(chatList);
         mChatList.setAdapter(mChatListAdapter);

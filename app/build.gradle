@@ -35,7 +35,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.1'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.google.firebase:firebase-database:19.3.0'
-
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.facebook.fresco:fresco:2.2.0'
+    implementation 'com.github.stfalcon:frescoimageviewer:0.5.0'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }
